@@ -55,7 +55,33 @@
    <div data-role="content" class="login bod" id="carl2" style="display:none; width:100%; height:100%"><img style="width:100%; height:100%; position:absolute; left:0%; top:0%" class="head" src="img/logo2.png"><img style="background:none;width:30%; height:30%; position:absolute; left:35%; top:55%" class="head" src="img/preloader.gif"></div>
 <div data-role="content" class="logi bod" id="carl" style="background:#FFFFFF; height:100%"><img style="width:100%; height:100%; position:absolute; left:0%; top:0%" class="head" src="img/logo.png"></div>
 <div data-role="page" id="page" class="page" style="display:none">
-<img onclick="$('#page').hide();$('#info').show();" src="img/home.jpg" style="width:100%; height:100%; position:absolute; left:0%; top:0%">
+  <img class="mySlides" src="img/h1.jpg" style="width:100%; height:auto; position:absolute; left:0%; top:0%">
+  <img class="mySlides" src="img/h2.jpg" style="width:100%; height:auto; position:absolute; left:0%; top:0%">
+  <img class="mySlides" src="img/h3.jpg" style="width:100%; height:auto; position:absolute; left:0%; top:0%">
+  <img class="mySlides" src="img/h4.jpg" style="width:100%; height:auto; position:absolute; left:0%; top:0%">
+  <img onclick="$('#page').hide();$('#info').show();" class="mySlides" src="img/home.jpg" style="width:100%; height:auto; position:absolute; left:0%; top:0%">
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+<!--<img onclick="$('#page').hide();$('#info').show();" src="img/home.jpg" style="width:100%; height:100%; position:absolute; left:0%; top:0%">-->
 </div>
 <div data-role="page" id="info" class="info" style="display:none">
 

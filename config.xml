@@ -1,10 +1,10 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.phonegap.zamxa" version="1.0.0" android-versionCode="10000" ios-CFBundleVersion="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.phonegap.zamxahotels" version="1.0.0" android-versionCode="10000" ios-CFBundleVersion="1.0.0">
   <name>ZAMXA Hotels</name>
     <description>
         No 1 Hotel Booking Platform.
     </description>
-    <author email="support@callysconcept.com" href="https://callysconcept.com">
-        CALLYs Global Concept
+    <author email="support@callysconcept.com" href="https://zamxahotels.com">
+        Zamxa
     </author>
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>

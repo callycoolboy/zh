@@ -1,5 +1,5 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.phonegap.zamxa" version="1.0.0" android-versionCode="10000" ios-CFBundleVersion="1.0.0">
-  <name>ZAMXA Hotel</name>
+  <name>ZAMXA Hotels</name>
     <description>
         No 1 Hotel Booking Platform.
     </description>

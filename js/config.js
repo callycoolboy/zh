@@ -1,17 +1,21 @@
 
 function codeAddress() {
+$("#page2").hide();
    onLoad();         
-  $( "div.page" ).fadeOut( 100 ).delay( 17000 ).fadeIn( 2000 );
+ // $( ".swiper-container" ).fadeOut( 100 ).delay( 12000 ).fadeIn( 3000 );
  
-var duration = 10000;
+var duration = 7000;
     setTimeout(function() {
-$("#carl").fadeOut( 1500 );
 $("#carl2").show();
-$("#carl2").hide( 18000 );
+$("#carl").fadeOut( 1500 );
+$( ".swiper-container" ).fadeOut( 1000 ).delay( 5000 ).fadeIn( 1000 );
+//$( ".swiper-container" ).show();
+$("#carl2").fadeOut( 5000 );
+$( "#modal" ).fadeOut( 1000 ).delay( 7000 ).fadeIn( 1000 );
 
 }, duration);
 
-var duration2 = 10000;
+var duration2 = 7000;
     setTimeout(function() {  
  checkNetConnection();  
  }, duration2);

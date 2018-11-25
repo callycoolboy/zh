@@ -44,7 +44,7 @@
 <link rel="stylesheet" type="text/css" href="img/stylesheet1.css">
 <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
 <script src="js/jquery.mobile-1.0.min.js" type="text/javascript"></script>
-<script src="js/config.js?id=4" type="text/javascript"></script>
+<script src="js/config.js?id=10" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="css/inde.css" />
 	
     <title>CALLYs Store Web App</title>
@@ -87,7 +87,38 @@
       -webkit-align-items: center;
       align-items: center;
     }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+ .image-example {
+        text-align: center;
+		font-family: Optima, sans-serif;
+    }
+	.image-example h1{
+		font-family: Comic Sans MS, Comic Sans, cursive;
+		color:#ffffff;
+    }
   </style>
+  <style>
+.footer-img{
+	margin:0px;
+	bottom:0;
+	right:0;
+	position:absolute;
+	z-index:9;
+	width:70%
+}
+</style>
 </head>
  
 <body>
@@ -96,13 +127,19 @@
 <div data-role="content" class="logi bod" id="carl" style="background:#FFFFFF; height:100%"><img style="width:100%; height:100%; position:absolute; left:0%; top:0%" class="head" src="img/logo.png"></div>
 <div id="page2" class="swiper-container" style="display:block">
    <!-- Swiper -->
-     
+    <div id="modal" class="modal image-example" align="center">
+	<img src="img/swipe.gif">
+	<h1>Swipe Left to Continue</h1></br>
+	<span onclick="$('.modal').hide();" style="cursor:pointer;font-size:120%;color:#ffffff;background:blue;border:1px solid blue;padding:10px;">OK, GOT IT</span>
+	</div> 
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="img/h1.jpg" style="width:100%; height:100%; position:absolute; left:0%; top:0%"></div>
       <div class="swiper-slide"><img src="img/h2.jpg" style="width:100%; height:100%; position:absolute; left:0%; top:0%"></div>
       <div class="swiper-slide"><img src="img/h3.jpg" style="width:100%; height:100%; position:absolute; left:0%; top:0%"></div>
       <div class="swiper-slide"><img src="img/h4.jpg" style="width:100%; height:100%; position:absolute; left:0%; top:0%"></div>
-      <div class="swiper-slide"><img onclick="$('#page2').hide();$('#info').show();" src="img/home.jpg" style="width:100%; height:100%; position:absolute; left:0%; top:0%"></div>
+      <div class="swiper-slide"><img src="img/home.jpg" style="width:100%; height:100%; position:absolute; left:0%; top:0%">
+	  <img class="footer-img" onclick="$('#page2').hide();$('#info').show();" src="img/b_n.gif">
+	  </div>
     </div>
     <!-- Add Scrollbar -->
   <div class="swiper-pagination"></div>

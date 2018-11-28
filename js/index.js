@@ -27,33 +27,19 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        window.plugins.PushbotsPlugin.initialize("5bb38c371db2dc0c0e1fc0a4", {"android":{"sender_id":"489732460222"}});
-// Only with First time registration
-window.plugins.PushbotsPlugin.on("registered", function(token){
-	console.log("Registration Id:" + token);
-});
+		
+		document.addEventListener('deviceready', function () {
+  // Enable to debug issues.
+  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+  var notificationOpenedCallback = function(jsonData) {
+    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+  };
 
-//Get user registrationId/token and userId on PushBots, with evey launch of the app even launching with notification
-window.plugins.PushbotsPlugin.on("user:ids", function(data){
-	console.log("user:ids" + JSON.stringify(data));
-});
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+  window.plugins.OneSignal
+    .startInit("54fe2666-3588-48da-985a-682e8a5606d4")
+    .handleNotificationOpened(notificationOpenedCallback)
+    .endInit();
+}, false);
     }
 };

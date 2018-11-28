@@ -10,7 +10,7 @@
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name='phonegap-version' value='cli-7.0.1' />
-<preference name='pgb-builder-version' value='2' />
+<preference name='pgb-builder-version' value='1' />
   <preference name="android-build-tool" value="gradle" />
 <preference name="android-minSdkVersion" value="15" />
   <preference name="android-targetSdkVersion" value="26"/> //android 4.2
@@ -42,7 +42,12 @@
     <resource-file src="locales/android/drawable-xxhdpi/ic_stat_onesignal_default.png" target="res/drawable-xxhdpi/ic_stat_onesignal_default.png" />
     <resource-file src="locales/android/drawable-xxxhdpi/ic_stat_onesignal_default.png" target="res/drawable-xxxhdpi/ic_stat_onesignal_default.png" />
 
-    
+    <icon src="res/icon/android/zamxa-36_x_36.png" density="ldpi"/>
+    <icon src="res/icon/android/zamxa-48_x_48.png" density="mdpi"/>
+    <icon src="res/icon/android/zamxa-72_x_72.png" density="hdpi"/>
+    <icon src="res/icon/android/zamxa-96_x_96.png" density="xhdpi"/>
+    <icon src="res/icon/android/zamxa-144_x_144.png" density="xxhdpi"/>
+    <icon src="res/icon/android/zamxa-192_x_192.png" density="xxxhdpi"/>
     
       </platform>
   <platform name="ios">

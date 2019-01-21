@@ -1,66 +1,47 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.neptune.myapp" versionCode="100" version="1.0.0">
-<author>Me</author>
-<name>MyApp</name>
-<description>My App</description>
-<platform name="ios">
-    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
-        <string>to take pictures/scan barcodes</string>
-    </edit-config>
-    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
-        <string>to get pictures</string>
-    </edit-config>
-</platform>
-<platform name="android">
-<preference name="android-targetSdkVersion" value="26" />
-<plugin name="cordova-android-support-gradle-release" source="npm">
-<variable name="ANDROID_SUPPORT_VERSION" value="28.0.0"/>
-</plugin>
-</platform>
-<platform name="windows">
-<preference name="windows-appx-target" value="uap" />
-<preference name="windows-target-version" value="10.0" />
-<preference name="windows-arch" value="x64" />
-<preference name="WindowsDefaultUriPrefix" value="ms-appx-web://" />
-<preference name="WindowsToastCapable" value="true" />
-</platform>
-<preference name="phonegap-version" value="cli-8.1.1" />
-<preference name="StatusBarOverlaysWebView" value="false" />
-<preference name="fullscreen" value="false" />
-<preference name="LoadUrlTimeoutValue" value="70000" />
-<preference name="AutoHideSplashScreen" value="false" />
-<preference name="ShowSplashScreenSpinner" value="false"/>
-<preference name="FadeSplashScreen" value="false"/>
-<preference name="SplashShowOnlyFirstTime" value="false" />
-<preference name="SplashMaintainAspectRatio" value="true" />
-<preference name="DisallowOverscroll" value="true"/>
-<preference name="SuppressesLongPressGesture" value="true" />
-<preference value="none" name="permissions"/>
-<plugin name="pushwoosh-pgb-plugin" source="npm" />
-<plugin name="" source="git" spec="https://github.com/neptsoft/cordova-plugin-file-opener2"/>
-<plugin name="cordova-plugin-android-fingerprint-auth" source="npm"/>
-<plugin name="cordova-plugin-camera" source="npm"/>
-<plugin name="cordova-plugin-cookiemaster" source="npm"/>
-<plugin name="cordova-plugin-device" source="npm"/>
-<plugin name="cordova-plugin-dialogs" source="npm"/>
-<plugin name="cordova-plugin-file" source="npm"/>
-<plugin name="cordova-plugin-file-transfer" source="npm"/>
-<plugin name="cordova-plugin-geolocation" source="npm"/>
-<plugin name="cordova-plugin-inappbrowser" source="npm"/>
-<plugin name="cordova-plugin-media" source="npm"/>
-<plugin name="cordova-plugin-media-capture" source="npm"/>
-<plugin name="cordova-plugin-network-information" source="npm"/>
-<plugin name="cordova-plugin-secure-key-store" source="npm"/>
-<plugin name="cordova-plugin-splashscreen" source="npm"/>
-<plugin name="cordova-plugin-statusbar" source="npm"/>
-<plugin name="cordova-plugin-touchid" source="npm"/>
-<plugin name="cordova-plugin-whitelist" source="npm"/>
-<allow-intent target="_blank" target="_blank" target="_blank" href="http://*/*"/>
-<allow-intent target="_blank" target="_blank" target="_blank" href="https://*/*"/>
-<allow-intent href="tel:*"/>
-<allow-intent href="sms:*"/>
-<allow-intent href="mailto:*"/>
-<allow-intent href="geo:*"/>
-<allow-navigation href="*" />
-<access origin="*" subdomains="true" />
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>HelloWorld</name>
+    <description>
+        Hello World sample application with Pushwoosh Phonegap push notifications plugin integrated
+    </description>
+    <author email="support@pushwoosh.com" href="http://pushwoosh.com">
+        Pushwoosh
+    </author>
+    <preference name="phonegap-version" value="cli-6.5.0" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="android-build-tool" value="gradle" />
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="pushwoosh-cordova-plugin" spec="~7.0.4">
+        <variable name="LOG_LEVEL" value="DEBUG" />
+        <variable name="IOS_FOREGROUND_ALERT_TYPE" value="BANNER" />
+        <variable name="ANDROID_FOREGROUND_PUSH" value="false" />
+    </plugin>
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
 </widget>

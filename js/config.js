@@ -17,7 +17,7 @@ $( "#modal" ).fadeOut( 1000 ).delay( 7000 ).fadeIn( 1000 );
 
 var duration2 = 7000;
     setTimeout(function() {  
- checkNetConnection();  
+ //checkNetConnection();  
  }, duration2);
 	 }
 window.onload = codeAddress;
@@ -33,9 +33,9 @@ function onLoad() {
 if(online) {
 	window.screen.orientation.lock('portrait'); 
 } else {
-	navigator.vibrate(500);
+	//navigator.vibrate(500);
   alert("Connection Not Available\nCheck Network settings and Try Again!!!");
-  navigator.app.exitApp();
+  //navigator.app.exitApp();
 }
 }
 
@@ -54,7 +54,7 @@ function checkNetConnection(){
 	  swal("Network Error!!!", "Check Internet Connection Or check if app is running in Latest Version and Try Again.", "error");
 	  var dura = 3000;
     setTimeout(function() {
-	  navigator.app.exitApp();
+	  //navigator.app.exitApp();
 	  }, dura);
    return false;
   }
@@ -63,7 +63,7 @@ function checkNetConnection(){
 	  swal("Network Error!!!", "Check Internet Connection Or check if app is running in Latest Version and Try Again.", "error");
 	  var dura = 3000;
     setTimeout(function() {
-	  navigator.app.exitApp();
+	  //navigator.app.exitApp();
 	  }, dura);
    return false;
  }

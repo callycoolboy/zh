@@ -21,7 +21,7 @@
 document.addEventListener('deviceready', function () {
   // Enable to debug issues.
   // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-  
+  try{
   var notificationOpenedCallback = function(jsonData) {
     console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
   };
@@ -30,4 +30,6 @@ document.addEventListener('deviceready', function () {
     .startInit("54fe2666-3588-48da-985a-682e8a5606d4")
     .handleNotificationOpened(notificationOpenedCallback)
     .endInit();
+  }catch(){
+  }
 }, false);

@@ -1,7 +1,6 @@
-
 function codeAddress() {
 $("#page2").hide();
-   onLoad();         
+   //onLoad();         
  // $( ".swiper-container" ).fadeOut( 100 ).delay( 12000 ).fadeIn( 3000 );
  
 var duration = 7000;

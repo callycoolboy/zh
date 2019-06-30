@@ -30,6 +30,6 @@ document.addEventListener('deviceready', function () {
     .startInit("54fe2666-3588-48da-985a-682e8a5606d4")
     .handleNotificationOpened(notificationOpenedCallback)
     .endInit();
-  }catch(){
+  }catch(e){
   }
 }, false);

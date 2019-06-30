@@ -160,9 +160,12 @@
     
     </div>
 	<script>
+		try{
         $("#llink")
             .html('<object id="ddd" data="https://www.zamxahotels.com/app/index.php" width="100%" style="height:100%; overflow:auto;"/>');
-</script>
+		} catch(e){
+		swal("Network Error!!!", "Check Internet ConnectionOr and Try Again.", "error");
+	  }</script>
     
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
